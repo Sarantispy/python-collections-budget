@@ -1,7 +1,12 @@
 import matplotlib.pyplot as plt
 import collections
-from . import Expense
+import os
+from Expense import Expense
+from Expense import Expenses
 
+
+dir_path = os.path.dirname(os.path.realpath(__file__))  # find the .py file current folder
+os.chdir(dir_path)                                      # make the folder working directory
 
 expenses = Expenses()
 expenses.read_expenses("C:/GitHub/PluralSight/python-collections-budget/data/spending_data.csv")
